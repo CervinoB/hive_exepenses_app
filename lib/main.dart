@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_expenses_app/model/transaction.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: title,
       theme: ThemeData(primarySwatch: Colors.indigo),
-      home: TransactionPage(),
+      home: const TransactionPage(),
     );
   }
 }

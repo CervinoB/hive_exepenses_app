@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_expenses_app/model/transaction.dart';
 import 'package:hive_flutter/adapters.dart';
 
