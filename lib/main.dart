@@ -8,8 +8,9 @@ Future main() async {
   await Hive.initFlutter();
 
   Hive.registerAdapter(TransactionAdapter());
+  await Hive.openBox<Transaction>('transactions');
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,6 +19,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: title,
+      theme: ThemeData(primarySwatch: Colors.indigo),
+      home: TransactionPage(),
+    );
   }
 }
